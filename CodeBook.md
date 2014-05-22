@@ -49,4 +49,4 @@ As stated in the project instructions, we compute the average of each measuremen
 
     tidy_data_set <- aggregate(filtered, by=list(filtered$subject, filtered$activity), FUN=mean) 
 
-After this our tidy data set is completed, and we write it out to a tab delimited text file using `write.table(tidy_data_set, file="tidy_data_set.txt", sep="\t")`.
+After this our tidy data set is completed, and we write it out to a tab delimited text file using `write.table(tidy_data_set, file="tidy_data_set.txt", sep="\t", row.names=F)`.
