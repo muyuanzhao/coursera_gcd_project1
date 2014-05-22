@@ -14,6 +14,7 @@ The UCI HAR files provided for analysis include:
 * subject_train.txt
 * activity_labels.txt
 * features.txt
+* features_info.txt
 
 These files should be located in the same directory as the run_analysis.R file, before attempting to run this script.  The tidy_data_set.txt file will be created as a result of running the run_analysis.R script.   
 
