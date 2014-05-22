@@ -15,13 +15,15 @@ The UCI HAR files required for this analysis include:
 
 The run_analysis.R script performs several major activities which are described below.
 
-**Combining Data
+Combining Data
+---------------------------
 
 First data from X_test.txt, y_test.txt, and subject_test.txt are extracted into data frames, and then combined into a single data frame using cbind().  The same thing is done with X_train.txt, y_train.txt, and subject_train.txt.  
 
 After we assemble the testing and training data sets into separate data frames, we combine these into a single data frame called 'combo' using rbind().
 
-**Filtering Data
+Filtering Data
+---------------------------
 To comply with the instructions of the project, we then filter out of 'combo' all columns that are not mean or standard deviation type measurements.  
 
 To do this we first extract the data from features.txt into a data frame.  The first column of this file contains the number of the corresponding field in the X_train.txt and X_test.txt files.  Next, we filter out all the features/rows not matching the regular expression pattern 'mean|std' using `filtered_cols <- which(grepl('mean|std', features$feature))` .  We use the values of the remaining records to subset the columns from the 'combo' dataset into a new data frame called 'filtered'.  
@@ -32,7 +34,8 @@ Once the 'combo' data has been filtered we use similar logic to extract the feat
     filtered_cols <- c(head(names(combo), 2), filtered_cols)
     names(filtered) <- filtered_cols
 
-**Setting Activity Labels
+Setting Activity Labels
+---------------------------------
 Our tidy data set needs to include the activity names/descriptions instead of their numeric codes.  We do this be extracting the data from the activity_labels.txt file into a data frame.  Then we convert the 'activity' column in our filtered data frame to a factor defined by the numeric codes and lables in this 'activities' data frame.  This code can be seen below:
 
     activities <- read.table('activity_labels.txt', col.names=c('activity_code', 'activity_name'))
@@ -40,7 +43,8 @@ Our tidy data set needs to include the activity names/descriptions instead of th
                             levels=activities[,1],
                             labels=activities[,2])
 
-**Final Aggregation and Writing to file
+Final Aggregation and Writing to file
+-----------------------------------------------
 As stated in the project instructions, we compute the average of each measurement (found in the 'X' files).  We group this aggregation by subject and activity name with the code below:
 
     tidy_data_set <- aggregate(filtered, by=list(filtered$subject, filtered$activity), FUN=mean) 
