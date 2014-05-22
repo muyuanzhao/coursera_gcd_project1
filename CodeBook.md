@@ -4,14 +4,14 @@ Code Book - Tidy Data Set Project
 This is the code book for tidy_data_set.txt, which is a cleaned up version of the UCI HAR data set.  This file can be duplicated by using the run_analysis.R script and the necessary UCI HAR files (listed below).  Information for this data set can be found at http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.
 
 The UCI HAR files required for this analysis include:
-*X_train.txt
-*X_test.txt
-*y_train.txt
-*y_test.txt
-*subject_test.txt
-*subject_train.txt
-*activity_labels.txt
-*features.txt
+* X_train.txt
+* X_test.txt
+* y_train.txt
+* y_test.txt
+* subject_test.txt
+* subject_train.txt
+* activity_labels.txt
+* features.txt
 
 The run_analysis.R script performs several major activities which are described below.
 

@@ -6,14 +6,14 @@ This repo contains the files needed to perform analysis on the UCI HAR Dataset. 
 The file run_analysis.R in this repository can be used to complete the instructions of the project (below).  More information about the data and transformations used in this script can be found in the CodeBook.md file in this repository. 
 
 The UCI HAR files provided for analysis include:
-*X_train.txt
-*X_test.txt
-*y_train.txt
-*y_test.txt
-*subject_test.txt
-*subject_train.txt
-*activity_labels.txt
-*features.txt
+* X_train.txt
+* X_test.txt
+* y_train.txt
+* y_test.txt
+* subject_test.txt
+* subject_train.txt
+* activity_labels.txt
+* features.txt
 
 These files should be located in the same directory as the run_analysis.R file, before attempting to run this script.  The tidy_data_set.txt file will be created as a result of running the run_analysis.R script.   
 
