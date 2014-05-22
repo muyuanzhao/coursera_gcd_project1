@@ -13,7 +13,7 @@ The UCI HAR files required for this analysis include:
 * activity_labels.txt
 * features.txt
 
-There are many variables in the final tidy_data_set.txt file.  The 'subject' field contains the identifier for the person participating in the study.  The 'activity' field contains the description of the activity being performed by the subject.  The descriptions of the remaining fields can be found in the features.txt file.  
+There are many variables in the final tidy_data_set.txt file.  The 'subject' field contains the identifier for the person participating in the study.  The 'activity' field contains the description of the activity being performed by the subject.  The descriptions of the remaining fields can be found in the features_info.txt file.  
 
 The run_analysis.R script performs several major activities which are described below.
 
